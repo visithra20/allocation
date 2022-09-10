@@ -4,11 +4,12 @@
     "description": "",
     "main": "index.js",
     "dependencies": {
-        "commitizen": "^4.2.5",
         "yaml": "^1.10.2",
         "yarn": "^1.22.19"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "commitizen": "^4.2.5"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "commit": "cz"
