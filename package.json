@@ -4,6 +4,12 @@
     "description": "",
     "main": "index.js",
     "dependencies": {
+        "@emotion/react": "^11.10.4",
+        "@mdx-js/react": "^1.6.22",
+        "next": "^12.3.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "theme-ui": "^0.14.7",
         "yaml": "^1.10.2",
         "yarn": "^1.22.19"
     },
@@ -11,8 +17,10 @@
         "commitizen": "^4.2.5"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "commit": "cz"
+        "commit": "cz",
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
     },
     "repository": {
         "type": "git",
