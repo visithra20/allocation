@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
           />
         </Head>
 
-        <body style={{backgroundColor:"#F8F8F8",fontFamily:"roboto"}}>
+        <body style={{backgroundColor:"#F8F8F8",fontFamily:'Roboto'}}>
           <Main />
             
           <NextScript />

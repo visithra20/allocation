@@ -1,10 +1,10 @@
 import React from 'react'
-import { Box } from 'theme-ui'
- const index = () => {
+import { Login } from '../src/login'
+const Index = () => {
   return (
-    <Box p={4} color="red" bg="black">
-    Beep
-  </Box>
+    <>
+    <Login/>
+    </>
   )
 }
-export default index
+export default Index;
