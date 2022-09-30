@@ -13,20 +13,17 @@ import {
 import Image from 'next/image'
 import logo from '../assests/logo.svg'
 import { FcGoogle } from 'react-icons/fc'
-import { useRouter } from 'next/router'
+import Router from 'next/router'
 // import {AiOutlineEye} from 'react-icons/ai'
 export const Login = () => {
     const[username,setUsername]=useState()
     const[password,setPassword]=useState()
-    // const togglePassword = () => {
-    //     setPassword(!password);
-    //   };
-    const Router = useRouter()
-    const Landingroute = () => {
-        Router.push('/landingpage')
-    }
+    const [checked, setChecked] = useState();
+  const RouteLandingPage=()=>{
+       Router.push("/landingpage");
+  }
     return (
-        <Box as="form" variant="theme.forms" sx={{ m: '5%  28.5%', bg: 'white' ,p: '4% 6.5%'}}>
+        <Box as="form" variant="theme.forms" sx={{ m: [['5%  20.5%'],['5%  20.5%'],['5%  20.5%'],['5%  28.5%']], bg: 'white' ,p: '4% 6.5%'}}>
                 <Box sx={{ textAlign: 'center', pb: '2%' }}>
                     <Image src={logo} />
                 </Box>
@@ -59,19 +56,24 @@ export const Login = () => {
                 </Flex>
                 <NavLink variant="theme.links.nav">Forgot password?</NavLink>
                     <Label>
-                        <Checkbox />
+                        <Checkbox 
+                        checked={checked}
+                        onChange={(e ) => {
+                        setChecked(e.target.checked)
+                        console.log(e.target.checked)
+                    }}/>
                         Remember me
                     </Label>
-                    <Button variant="theme.buttons.primary" onClick={Landingroute}>Login</Button>
+                    <Button variant="theme.buttons.primary" onClick={RouteLandingPage}>Login</Button>
                     <Button variant="theme.buttons.secondary">
                     <FcGoogle style={{marginRight:"4%"}}/>
                         Signup with google
                     </Button>
                         <Paragraph variant="theme.text.block">
                             Don’t have an account?
-                            <NavLink variant="theme.links.nav">
+                            <NavLink variant="theme.links.nav" href="/registerpage" sx={{ml:'1%'}}>
                                 Register
-                            </NavLink>{' '}
+                            </NavLink>
                         </Paragraph></Box>
     )
 }
